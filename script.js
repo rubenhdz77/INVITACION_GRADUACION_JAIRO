@@ -1,4 +1,3 @@
-```javascript
 /* =========================================================
    INVITACIÓN DE GRADUACIÓN
 ========================================================= */
@@ -134,5 +133,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-```
 
