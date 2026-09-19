@@ -1,1 +1,652 @@
+```css
+/* =========================================================
+   INVITACIÓN DE GRADUACIÓN
+   DISEÑO ELEGANTE - MECÁNICA
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #080b12;
+    color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PANTALLA DE INICIO
+========================================================= */
+
+.pantalla-inicio {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at center, #202b3d 0%, #080b12 65%);
+}
+
+.contenido-inicio {
+    width: 90%;
+    max-width: 600px;
+
+    text-align: center;
+
+    animation: aparecer 1.5s ease;
+}
+
+.icono-graduacion {
+    font-size: 75px;
+    margin-bottom: 20px;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.pequeno {
+    font-family: Arial, sans-serif;
+    letter-spacing: 5px;
+    font-size: 12px;
+    color: #d7b56d;
+}
+
+.contenido-inicio h1 {
+    font-size: clamp(45px, 10vw, 85px);
+    margin: 20px 0 15px;
+
+    background: linear-gradient(
+        90deg,
+        #d7b56d,
+        #fff4c7,
+        #d7b56d
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.linea {
+    width: 120px;
+    height: 2px;
+    margin: 20px auto;
+
+    background: #d7b56d;
+}
+
+.texto-inicio {
+    max-width: 450px;
+    margin: auto;
+
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+#btnEntrar {
+    margin-top: 35px;
+
+    padding: 16px 32px;
+
+    border: 1px solid #d7b56d;
+    border-radius: 40px;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#btnEntrar:hover {
+    background: #d7b56d;
+    color: #111;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.oculto {
+    display: none;
+}
+
+.seccion {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.etiqueta {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #d7b56d;
+    margin-bottom: 15px;
+}
+
+.seccion h2 {
+    font-size: clamp(35px, 7vw, 60px);
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.portada {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(5, 8, 13, .7),
+            rgba(5, 8, 13, .95)
+        ),
+        radial-gradient(
+            circle at center,
+            #27374b,
+            #080b12 70%
+        );
+}
+
+.portada-contenido {
+    max-width: 850px;
+    padding: 30px;
+
+    animation: aparecer 2s ease;
+}
+
+.birrete {
+    font-size: 70px;
+
+    animation: flotar 4s ease-in-out infinite;
+}
+
+.sobre {
+    font-family: Arial, sans-serif;
+    letter-spacing: 6px;
+    font-size: 12px;
+    color: #d7b56d;
+
+    margin-top: 20px;
+}
+
+.portada h2 {
+    font-size: clamp(30px, 6vw, 50px);
+    font-weight: normal;
+
+    margin-top: 25px;
+}
+
+.portada h1 {
+    font-size: clamp(55px, 11vw, 110px);
+
+    margin: 5px 0;
+
+    background: linear-gradient(
+        90deg,
+        #c49a4a,
+        #fff3c2,
+        #c49a4a
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.ornamento {
+    color: #d7b56d;
+    letter-spacing: 4px;
+    margin: 25px 0;
+}
+
+.carrera {
+    font-family: Arial, sans-serif;
+    letter-spacing: 5px;
+    font-size: 14px;
+    color: #eee;
+}
+
+.mensaje {
+    max-width: 600px;
+    margin: 30px auto;
+
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d5d5d5;
+}
+
+.flecha {
+    font-size: 30px;
+    color: #d7b56d;
+
+    margin-top: 40px;
+
+    animation: bajar 1.5s infinite;
+}
+
+
+/* =========================================================
+   PRESENTACIÓN
+========================================================= */
+
+.presentacion {
+    background: #10151e;
+}
+
+.foto-principal {
+    width: min(85vw, 450px);
+    height: min(110vw, 580px);
+
+    margin: 0 auto 40px;
+
+    overflow: hidden;
+
+    border: 5px solid #d7b56d;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, .7);
+}
+
+.foto-principal img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .7s;
+}
+
+.foto-principal:hover img {
+    transform: scale(1.05);
+}
+
+.nombre {
+    font-size: clamp(30px, 6vw, 55px);
+
+    color: #fff;
+
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #cfcfcf;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   MENSAJE
+========================================================= */
+
+.mensaje-seccion {
+    background:
+        radial-gradient(
+            circle at center,
+            #263344,
+            #0b0f16 70%
+        );
+}
+
+.tarjeta {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 55px 35px;
+
+    border: 1px solid rgba(215, 181, 109, .5);
+
+    background: rgba(255,255,255,.03);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.3);
+}
+
+.tarjeta p {
+    font-size: 21px;
+
+    line-height: 2;
+
+    color: #e7e7e7;
+}
+
+.comillas {
+    display: block;
+
+    font-size: 70px;
+
+    line-height: 30px;
+
+    color: #d7b56d;
+}
+
+.comillas.final {
+    text-align: right;
+}
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.galeria-seccion {
+    background: #080b12;
+}
+
+.galeria {
+    width: min(1100px, 95%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+.foto {
+    height: 370px;
+
+    overflow: hidden;
+
+    border: 2px solid rgba(215,181,109,.5);
+
+    background: #151b25;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .6s;
+}
+
+.foto:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   EVENTO
+========================================================= */
+
+.evento {
+    background: #111722;
+}
+
+.datos {
+    width: min(1000px, 95%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.dato {
+    padding: 35px 20px;
+
+    border: 1px solid rgba(215,181,109,.35);
+
+    background: rgba(255,255,255,.025);
+}
+
+.dato-icono {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.dato h3 {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #d7b56d;
+
+    margin-bottom: 12px;
+}
+
+.dato p {
+    font-size: 18px;
+
+    color: #eee;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #2b3a4d,
+            #080b12 70%
+        );
+}
+
+.final-contenido {
+    max-width: 700px;
+}
+
+.final-icono {
+    font-size: 70px;
+
+    margin-bottom: 25px;
+}
+
+.final h2 {
+    font-size: clamp(40px, 8vw, 70px);
+
+    color: #d7b56d;
+
+    margin-bottom: 25px;
+}
+
+.final p {
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #ddd;
+}
+
+.final h3 {
+    font-size: 25px;
+
+    color: white;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   BOTÓN MÚSICA
+========================================================= */
+
+.boton-musica {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d7b56d;
+
+    background: #10151e;
+
+    color: #fff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.5);
+}
+
+.boton-musica.reproduciendo {
+    animation: girar 3s linear infinite;
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes bajar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
+}
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .seccion {
+        padding: 75px 18px;
+    }
+
+    .portada-contenido {
+        padding: 20px;
+    }
+
+    .portada h1 {
+        line-height: 1;
+    }
+
+    .mensaje {
+        font-size: 16px;
+    }
+
+    .tarjeta {
+        padding: 40px 22px;
+    }
+
+    .tarjeta p {
+        font-size: 17px;
+    }
+
+    .foto {
+        height: 330px;
+    }
+
+    .dato {
+        padding: 28px 15px;
+    }
+}
+```
 
