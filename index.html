@@ -1,1 +1,247 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Graduación 🎓</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE INICIO -->
+    <section id="inicio" class="pantalla-inicio">
+
+        <div class="brillo"></div>
+
+        <div class="contenido-inicio">
+
+            <div class="icono-graduacion">🎓</div>
+
+            <p class="pequeno">CON GRAN ALEGRÍA</p>
+
+            <h1>Mi Graduación</h1>
+
+            <div class="linea"></div>
+
+            <p class="texto-inicio">
+                Te invito a compartir conmigo
+                un momento muy especial.
+            </p>
+
+            <button id="btnEntrar">
+                ✨ VER INVITACIÓN ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INVITACIÓN -->
+    <main id="invitacion" class="oculto">
+
+        <!-- PORTADA -->
+        <section class="portada">
+
+            <div class="estrellas"></div>
+
+            <div class="portada-contenido">
+
+                <div class="birrete">🎓</div>
+
+                <p class="sobre">CON MUCHA ALEGRÍA</p>
+
+                <h2>Celebramos</h2>
+
+                <h1>Mi Graduación</h1>
+
+                <div class="ornamento">✦ ─── ✦ ─── ✦</div>
+
+                <p class="carrera">
+                    TÉCNICO EN MECÁNICA
+                </p>
+
+                <p class="mensaje">
+                    Después de mucho esfuerzo,
+                    dedicación y perseverancia,
+                    ha llegado el momento de celebrar
+                    este gran logro.
+                </p>
+
+                <div class="flecha">↓</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRESENTACIÓN -->
+        <section class="seccion presentacion">
+
+            <p class="etiqueta">UN LOGRO QUE COMPARTO CONTIGO</p>
+
+            <h2>¡Lo logré!</h2>
+
+            <div class="foto-principal">
+
+                <img
+                    src="imagenes/graduado.jpg"
+                    alt="Foto del graduado"
+                    onerror="this.src='https://via.placeholder.com/700x900?text=Foto+del+Graduado';"
+                >
+
+            </div>
+
+            <h3 class="nombre">
+                [NOMBRE DEL GRADUADO]
+            </h3>
+
+            <p class="descripcion">
+                Hoy cierro una etapa llena de aprendizajes
+                y comienzo un nuevo camino lleno de
+                oportunidades.
+            </p>
+
+        </section>
+
+
+        <!-- MENSAJE -->
+        <section class="seccion mensaje-seccion">
+
+            <div class="tarjeta">
+
+                <span class="comillas">“</span>
+
+                <p>
+                    Cada esfuerzo, cada desvelo y cada reto
+                    valieron la pena. Hoy celebro no solamente
+                    un título, sino también el camino recorrido
+                    para llegar hasta aquí.
+                </p>
+
+                <span class="comillas final">”</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOTOS -->
+        <section class="seccion galeria-seccion">
+
+            <p class="etiqueta">MOMENTOS ESPECIALES</p>
+
+            <h2>Recuerdos</h2>
+
+            <div class="galeria">
+
+                <div class="foto">
+                    <img
+                        src="imagenes/foto1.jpg"
+                        alt="Recuerdo de graduación"
+                        onerror="this.src='https://via.placeholder.com/600x750?text=Foto+1';"
+                    >
+                </div>
+
+                <div class="foto">
+                    <img
+                        src="imagenes/foto2.jpg"
+                        alt="Recuerdo especial"
+                        onerror="this.src='https://via.placeholder.com/600x750?text=Foto+2';"
+                    >
+                </div>
+
+                <div class="foto">
+                    <img
+                        src="imagenes/familia.jpg"
+                        alt="Familia"
+                        onerror="this.src='https://via.placeholder.com/600x750?text=Familia';"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATOS DEL EVENTO -->
+        <section class="seccion evento">
+
+            <p class="etiqueta">ACOMPAÑAME A CELEBRAR</p>
+
+            <h2>Un día especial</h2>
+
+            <div class="datos">
+
+                <div class="dato">
+                    <div class="dato-icono">📅</div>
+                    <h3>FECHA</h3>
+                    <p>[DÍA / MES / AÑO]</p>
+                </div>
+
+                <div class="dato">
+                    <div class="dato-icono">⏰</div>
+                    <h3>HORA</h3>
+                    <p>[HORA]</p>
+                </div>
+
+                <div class="dato">
+                    <div class="dato-icono">📍</div>
+                    <h3>LUGAR</h3>
+                    <p>[LUGAR DEL EVENTO]</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AGRADECIMIENTO -->
+        <section class="final">
+
+            <div class="final-contenido">
+
+                <div class="final-icono">🎓</div>
+
+                <h2>Gracias por ser parte</h2>
+
+                <p>
+                    Tu presencia hará que este momento
+                    sea todavía más especial.
+                </p>
+
+                <div class="ornamento">
+                    ✦ ───────── ✦
+                </div>
+
+                <h3>
+                    ¡Nos vemos en la celebración!
+                </h3>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTROL DE MÚSICA -->
+        <button id="botonMusica" class="boton-musica">
+            🎵
+        </button>
+
+        <audio id="musica" loop>
+            <source src="graduacion.mp3" type="audio/mpeg">
+        </audio>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
 
