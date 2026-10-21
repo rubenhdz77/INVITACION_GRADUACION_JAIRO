@@ -805,3 +805,55 @@ body {
         bottom: 14px;
     }
 }
+
+
+/* CARRO GRADUADO ANIMADO */
+
+.carro-graduacion {
+    width: min(90%, 480px);
+    margin: 20px auto 30px;
+    position: relative;
+    animation: saltoCarro 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 12px 18px rgba(215, 181, 109, 0.3));
+}
+
+.carro-graduacion img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Movimiento de salto */
+@keyframes saltoCarro {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-18px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-32px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    .carro-graduacion {
+        width: min(95%, 350px);
+        margin: 15px auto 25px;
+    }
+}
+
+/* Respetar a quienes prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .carro-graduacion {
+        animation: none;
+    }
+}
