@@ -648,3 +648,160 @@ body {
     }
 }
 
+
+/* =========================================================
+   NAVEGACIÓN ENTRE PÁGINAS
+========================================================= */
+
+/* Ocultar todas las páginas inicialmente */
+.pagina {
+    display: none;
+}
+
+/* Mostrar únicamente la página activa */
+.pagina.pagina-activa {
+    display: block;
+}
+
+/* Conservar los diseños flexibles originales */
+.portada.pagina-activa,
+.final.pagina-activa {
+    display: flex;
+}
+
+/* Navegación de cada página */
+.navegacion-paginas {
+    width: 100%;
+    max-width: 650px;
+    margin: 45px auto 0;
+    padding: 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-pagina {
+    min-height: 46px;
+    padding: 12px 22px;
+
+    border: 1px solid #d7b56d;
+    border-radius: 30px;
+
+    background: #d7b56d;
+    color: #10151e;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background .3s, transform .3s;
+}
+
+.btn-pagina:hover:not(:disabled) {
+    background: #fff0bd;
+    transform: translateY(-2px);
+}
+
+.btn-pagina:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
+.indicador-pagina {
+    color: #d7b56d;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Separar la navegación del contenido */
+.portada-contenido .navegacion-paginas,
+.final-contenido .navegacion-paginas {
+    margin-top: 35px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+
+    .navegacion-paginas {
+        gap: 8px;
+        margin-top: 30px;
+    }
+
+    .btn-pagina {
+        min-height: 44px;
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+
+    .indicador-pagina {
+        width: 100%;
+        order: -1;
+        margin-bottom: 5px;
+    }
+
+    .portada-contenido .navegacion-paginas,
+    .final-contenido .navegacion-paginas {
+        margin-top: 25px;
+    }
+
+    .foto-principal {
+        width: 100%;
+        max-width: 380px;
+        height: min(115vw, 500px);
+    }
+
+    .galeria {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .foto {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .datos {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .dato {
+        padding: 25px 15px;
+    }
+
+    .seccion {
+        padding: 65px 16px;
+    }
+
+    .tarjeta {
+        padding: 35px 20px;
+    }
+
+    .tarjeta p {
+        overflow-wrap: anywhere;
+    }
+
+    .portada-contenido {
+        width: 100%;
+        padding: 25px 16px;
+    }
+
+    .portada h1 {
+        overflow-wrap: anywhere;
+    }
+
+    .boton-musica {
+        width: 48px;
+        height: 48px;
+        right: 14px;
+        bottom: 14px;
+    }
+}
